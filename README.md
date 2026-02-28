@@ -2,6 +2,9 @@
 
 The emoji displayed on the screen will change constantly to mirror your facial expressions.
 
+
+https://github.com/user-attachments/assets/ca24bf56-4676-477b-993f-77e8093edf1d
+
 ### Facial Expression Detection
 
 The software detects expressions from your face using the library <b>face-api.js</b>. It uses three models to do this: <b>tinyFaceDetector</b> detects where your face is in the video stream, <b>faceLandmark68Net</b> maps out 68 specific points on your face (node, eyes, mouth, etc), and <b>faceExpressionNet</b> guesses the expression given by your face.
