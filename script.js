@@ -134,13 +134,6 @@ async function detectLoop() {
     const idx = Math.floor((now / cycleMs) % options.length);
     const emoji = options[idx];
 
-    // #region agent log
-    if (expr === "neutral") {
-      const happyP = expressions.happy ?? 0;
-      fetch('http://127.0.0.1:7243/ingest/9e985b71-7dcf-474a-af3d-296bc3f27388',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'script.js:neutralChoice',message:'showing neutral',data:{neutralP:confidence,happyP,expr2,confidence2},timestamp:Date.now(),hypothesisId:'H1,H2'})}).catch(()=>{});
-    }
-    // #endregion
-
     // Confidence + hysteresis (lower bar when we preferred happy/sad over neutral or showing confused)
     const minConfidence =
       overrodeFromNeutral || showConfused ? 0.2 : 0.5;
