@@ -15,6 +15,8 @@ However, the model doesn't output a detection for the confused emotion. The way 
 
 If the program doesn't detect any of these five emotions, it displays the neutral face emoji. One challenge when developing this was that it often defaulted to the neutral emoji even when I was clearly smiling or frowning. To improve this, I made it so that if the model detects just a 20% chance of being happy or sad, it overrides this neutral reading. 
 
+To display the emojis, I used the library <b>twemoji</b>. This library is a set of images for every emoji that I can display with high quality. Before I used this, I tried displaying the emojis as just raw text, but then scaling these emojis to fill the whole screen was blurry.
+
 ### Inspiration
 
 This project was made for DESINV 23 at UC Berkeley. I was inspired by all the projects we were shown that made use of a camera pointed at your face in order to mirror a different version of that image back to you. I thought of different ways to render a person, such as cartoon characters or stick figures, but I eventually settled on emojis. I like the idea of using emojis because not only are they funny, but they are also more abstract and representative rather than being an attempt to render the exact video image in a certain style.
